@@ -52,7 +52,7 @@ def pushTag(tag):
     print(git_commit)
     os.system(git_commit)
 
-    git_push = 'git push origin'
+    git_push = 'git push origin' # git push -u origin master
     print(git_push)
     os.system(git_push)
 
