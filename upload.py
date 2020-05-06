@@ -28,12 +28,12 @@ def lint_push_podspec(spec_name,specs_name,source_specs_url):
     print('code git push complete, ready to lint and push spec !')
     time.sleep(3)
 
-    spec_lint = 'pod lib lint --sources=%s --allow-warnings --verbose'%source_specs_url
+    spec_lint = 'pod lib lint --sources=%s --allow-warnings --verbose --use-libraries'%source_specs_url
     print(spec_lint)
     res = os.system(spec_lint)
 
     if res == 0:
-        spec_push = 'pod repo push %s %s --allow-warnings --verbose'%(specs_name,spec_name)
+        spec_push = 'pod repo push %s %s --allow-warnings --verbose --use-libraries'%(specs_name,spec_name)
         print(spec_push)
         os.system(spec_push)
 
