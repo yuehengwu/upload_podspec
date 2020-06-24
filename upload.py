@@ -126,7 +126,8 @@ def delete_release_tag(tag):
 
 # File
 def find_whatsnew_from_ini(file_path,tag):
-
+    if '.Binary' in tag:
+        tag = tag.replace('.Binary','')
     cf = configparser.ConfigParser()
     cf.read(file_path,encoding='utf-8')
 

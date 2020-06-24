@@ -1,31 +1,30 @@
 # upload_podspec
 
-A python script for auto lint and push podspec, include auto commit and push code, then push a git tag, finally lint and push podspec.
+Python automated scripts, including automatic commit, version tag, lint check podspec legality, and upload to the specified specs address.
 
-## How to use ?
+## how to use ?
 
-Step 1 : You just need to modify global variable in `upload.py` file like below.
+- Specify the version corresponding to `s.version` in `xxx.podspec`
+- Modify `upload.py` file information
 
-```python 
-spec_path = './iMetisSDK.podspec'
-spec_name = 'iMetisSDK.podspec'
-specs_name = 'AIjiaSpecs'
-source_specs_url = 'ssh://git@gitlab.263nt.com:2200/italkbbspecs/italkbbspecs.git'
+```python
+spec_path ='./iMetisSDK.podspec'
+spec_name ='iMetisSDK.podspec'
+specs_name ='AIjiaSpecs'
+source_specs_url ='ssh://git@gitlab.263nt.com:2200/italkbbspecs/italkbbspecs.git'
+
+config_ini_path ='./upload.ini'
+
+gitlab_remote ='origin'
+gitlab_ref ='master'
+gitlab_proj_id = 19
+gitlab_user_access_token ='KLRVtbPLihP6eug-i7-d' #'qWXXuozFKgcDjCUWz26x'
+
+gitlab_api_url ='https://gitlab.263nt.com/api/v4/projects/%d/releases'% gitlab_proj_id
 ```
-
-Step2 : Add executable permissions to the script
+- Just authorize and execute the script
 
 ```python
 chmod 777 upload.py
-```
-
-Step3: Run `upload.py` on python3
-
-```python
-# run it as python-script 
-./upload.py 
-
-# also run it on python3
 python3 upload.py
 ```
-
