@@ -1,5 +1,7 @@
 # upload_podspec
 
+中文文档移步：[中文文档](./README_zh.md)
+
 Python automated scripts, including automatic commit, version tag, lint check podspec legality, and upload to the specified specs address.
 
 ## how to use ?
