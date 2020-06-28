@@ -6,7 +6,8 @@ Python automated scripts, including automatic commit, version tag, lint check po
 
 ## how to use ?
 
-- Specify the version corresponding to `s.version` in `xxx.podspec`
+- Specify the version corresponding to `s.version` in `xxx.podspec`, if it is `Binary` binary version, you need to add `.Binary` after the version (Example: 1.5.0. Binary)
+- Added update instructions for `upload.ini` version
 - Modify `upload.py` file information
 
 ```python

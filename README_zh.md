@@ -4,7 +4,9 @@ Python自动化脚本，内容包含自动commit，打版本tag，lint检查pods
 
 ## 如何使用 ?
 
-- 在`xxx.podspec`中指定`s.version`对应的版本
+- 在`xxx.podspec`中指定`s.version`对应的版本，若为`Binary`二进制版本则需要在版本后加`.Binary`
+（例如：1.5.0.Binary）
+- 新增`upload.ini`版本更新说明
 - 修改`upload.py`文件信息
 
 ```python 
